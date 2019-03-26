@@ -24,15 +24,15 @@
       }
       else {
         if (document.querySelector("#name").value = ""){
-          document.querySelector("#nameError").style.display="initial"; // how do i fetch the class .errormsg for styling purposes? What should I do when i click submit and the form resets?
-          console.log(document.querySelector("#nameError").style.display);
+          document.querySelector("#nameError").style.display="block"; // how do i fetch the class .errormsg for styling purposes? What should I do when i click submit and the form resets?
+          console.log(document.querySelector("#nameError"));
         }
         else{
           document.querySelector("#nameError").style.display="none";
        }
        if (document.querySelector("#name").value = ""){
-        document.querySelector("#addressError").style.display="initial";
-        console.log(document.querySelector("#addressError").style.display);
+        document.querySelector("#addressError").style.display="block";
+        console.log(document.querySelector("#addressError"));
        }
        else{
         document.querySelector("#addressError").style.display="none";
