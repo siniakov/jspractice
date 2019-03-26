@@ -38,14 +38,29 @@
 
     <script>
 
-        upDate(previewPic){
+        function upDate(previewPic){
             console.log(previewPic);
             document.querySelector("#image").innerHTML = previewPic.alt;
-            document.querySelector("#image").style.backgroundImage = url("SOMETHING USING CONCATENATION");
+            allInfo= document.getElementsByClassName("preview")[0]; // currently hardcoded to always return the first one (bernese mtn dog' - how to unpdate automatically?)
+            sourceUrl = allInfo.getAttribute("src");
+            console.log(sourceUrl);
+            document.querySelector("#image").style.backgroundImage = (document.getElementsByClassName("preview")[0]).src; //something wrong with this particular line of code - the text words, images don't
 
         }
 
-        unDo(){
+
+// things I'm struggling with: linking the function to the specific image --> i know we can use getElementbyId to access specific elements, but here we jut have a class with which to access them; how does tabindex fit into this? How to link PreviewPic to the actual items within the class
+
+
+//var testTarget = parentDOM.getElementsByClassName("test")[0]
+
+  //var expandImg = document.getElementById("expandedImg");
+  //var imgText = document.getElementById("imgtext");
+  //expandImg.src = imgs.src;
+  //imgText.innerHTML = imgs.alt;
+
+
+        function unDo(){
             document.querySelector("#image").innerHTML = "Hover over an image below.";
             document.querySelector("#image").style.backgroundImage = "";
 
@@ -62,33 +77,32 @@
         </div>
 
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-        <img class = "preview" tabindex = "1"
+        <img class = "preview" tabindex = "0"
             alt = "Bernese Mountain Dog" 
-            src = "bernesemountaindog.jpg
-      " onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()";>
+            src = "bernesemountaindog.jpg" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()";>
 
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
-        <img class = "preview" tabindex = "1"
+        <img class = "preview" tabindex = "0"
             alt = "Border Collie" 
             src = "bordercollie.jpg" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()";>
     
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-        <img class = "preview" tabindex = "1" 
+        <img class = "preview" tabindex = "0" 
             src = "greatpyrenees.jpg" 
             alt = "Great Pyrenees" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()";>
 
             <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-        <img class = "preview" tabindex = "1" 
+        <img class = "preview" tabindex = "0" 
             src = "greatdane.jpg" 
             alt = "Great Dane" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()";>
 
             <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-        <img class = "preview" tabindex = "1" 
+        <img class = "preview" tabindex = "0" 
             src = "poodle.jpg" 
             alt = "Poodle" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()";>
 
             <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-        <img class = "preview" tabindex = "1" 
+        <img class = "preview" tabindex = "0" 
             src = "russianterrier.jpg" 
             alt = "Russian Terrier" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()";>
 </body>
