@@ -37,6 +37,19 @@
     </style>
 
     <script>
+
+        upDate(previewPic){
+            console.log(previewPic);
+            document.querySelector("#image").innerHTML = previewPic.alt;
+            document.querySelector("#image").style.backgroundImage = url("SOMETHING USING CONCATENATION");
+
+        }
+
+        unDo(){
+            document.querySelector("#image").innerHTML = "Hover over an image below.";
+            document.querySelector("#image").style.backgroundImage = "";
+
+        }
     // I used Two functions here.  Starter idea at: 
     // https://codepen.io/ColleenEMc/pen/XmZzWw
     </script>
@@ -49,20 +62,35 @@
         </div>
 
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-        <img class = "preview" 
-            alt = "Styling with a Bandana" 
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg">
-
+        <img class = "preview" tabindex = "1"
+            alt = "Bernese Mountain Dog" 
+            src = "bernesemountaindog.jpg
+      " onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()";>
 
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
-        <img class = "preview" 
-            alt = "With My Boy" 
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG">
+        <img class = "preview" tabindex = "1"
+            alt = "Border Collie" 
+            src = "bordercollie.jpg" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()";>
     
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
         <img class = "preview" tabindex = "1" 
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" 
-            alt = "Young Puppy">
+            src = "greatpyrenees.jpg" 
+            alt = "Great Pyrenees" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()";>
+
+            <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1" 
+            src = "greatdane.jpg" 
+            alt = "Great Dane" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()";>
+
+            <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1" 
+            src = "poodle.jpg" 
+            alt = "Poodle" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()";>
+
+            <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1" 
+            src = "russianterrier.jpg" 
+            alt = "Russian Terrier" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()";>
 </body>
 </html>
     

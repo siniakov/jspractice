@@ -2,18 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Challenge 4</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <title>Challenge 3</title>
     <style>
-
-    .errormsg { 
-        /*font: Use a cool Google font*/
+    .errormsg {
+      font-family: 'Tangerine', serif;
+      font-size: 48px;
+      font-size: 22px;
       color:red;
-      display:none; } 
+      display:none;} 
     </style>
     
     <script>
     function checkForm(){
+      
+     
+      if ((document.querySelector("#name").value != "") && (document.querySelector("#addr").value != "")){
+        return true;
+      }
+      else {
+        //if (document.querySelector("#name").value = ""){
+        //  document.querySelector("#nameError").style.display="initial"; // how do i fetch the class .errormsg for styling purposes? What should I do when i click submit and the form resets?
+        //  console.log(document.querySelector("#nameError").style.display);
+        //}
+        //else{
+        //  document.querySelector("#nameError").style.display="none";
+       //}
+       //if (document.querySelector("#name").value = ""){
+       // document.querySelector("#addressError").style.display="initial";
+        //console.log(document.querySelector("#addressError").style.display);
+      // }
+      // else{
+      //  document.querySelector("#addressError").style.display="none";
+      // }
+       return false;
+
+     }
+
+
       // Write a function that displays the appropriate error message(s) if a field is left blank.  Make sure the form action is not performed if either field is blank.
+      // check if there's a value for name --> if there isn't a value, display error msg, else display = none
+      // check if there's a value for street address --> if there isn't a value, display error msg, else display = none
+      //if there's an error msg for *either* name or address, disable submit button, else enable submit
+
     }  
     </script>
 </head>
