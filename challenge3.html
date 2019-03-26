@@ -5,10 +5,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
   <title>Challenge 3</title>
     <style>
-    .errormsg {
+    .errorMsg {
       font-family: 'Tangerine', serif;
       font-size: 48px;
-      font-size: 22px;
       color:red;
       display:none;} 
     </style>
@@ -19,27 +18,22 @@
      // disable submit if either or one of the items is left blank - COMPLETE
      //need help with: show/hide error messages
 
-      if ((document.querySelector("#name").value != "") && (document.querySelector("#addr").value != "")){
-        return true;
-      }
-      else {
-        if (document.querySelector("#name").value = ""){
-          document.querySelector("#nameError").style.display="block"; // how do i fetch the class .errormsg for styling purposes? What should I do when i click submit and the form resets?
-          console.log(document.querySelector("#nameError"));
-        }
-        else{
-          document.querySelector("#nameError").style.display="none";
-       }
-       if (document.querySelector("#name").value = ""){
-        document.querySelector("#addressError").style.display="block";
-        console.log(document.querySelector("#addressError"));
-       }
-       else{
-        document.querySelector("#addressError").style.display="none";
-       }
-       return false;
-
+if (document.querySelector("#name").value === ""){
+  document.querySelector("#nameError").style.display="block";
+}
+else{
+  document.querySelector("#nameError").style.display="none"
+}
+if (document.querySelector("#addr").value === ""){
+            document.querySelector("#addressError").style.display="block";
+}
+else{
+  document.querySelector("#addressError").style.display="none";
+}
+if ((document.querySelector("#name").value === "") || (document.querySelector("#addr").value === "")){
+    return false;
      }
+
 
 
       // Write a function that displays the appropriate error message(s) if a field is left blank.  Make sure the form action is not performed if either field is blank.
